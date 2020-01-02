@@ -1,13 +1,5 @@
 import * as functions from "firebase-functions";
 
-export const onChange = functions.storage
-  .bucket("samaple")
-  .object()
-  .onChange((_handler: any) => {
-    // do anything
-    console.log("storage changed");
-  });
-
 export const onArchive = functions.storage
   .bucket("samaple")
   .object()
