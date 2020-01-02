@@ -1,7 +1,6 @@
 import * as functions from "firebase-functions";
 
 export const onArchive = functions.storage
-  .bucket("samaple")
   .object()
   .onArchive((_objectMetadata, _context) => {
     // do anything
@@ -9,7 +8,6 @@ export const onArchive = functions.storage
   });
 
 export const onDelete = functions.storage
-  .bucket("samaple")
   .object()
   .onDelete((_objectMetadata, _context) => {
     // do anything
@@ -17,7 +15,6 @@ export const onDelete = functions.storage
   });
 
 export const onFinalize = functions.storage
-  .bucket("samaple")
   .object()
   .onFinalize((_objectMetadata, _context) => {
     // do anything
@@ -25,7 +22,6 @@ export const onFinalize = functions.storage
   });
 
 export const onMetadataUpdate = functions.storage
-  .bucket("samaple")
   .object()
   .onMetadataUpdate((_objectMetadata, _context) => {
     // do anything
