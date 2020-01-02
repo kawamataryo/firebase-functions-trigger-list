@@ -3,7 +3,7 @@ import * as functions from "firebase-functions";
 export const onChange = functions.storage
   .bucket("samaple")
   .object()
-  .onChange(_handler => {
+  .onChange((_handler: any) => {
     // do anything
     console.log("storage changed");
   });
@@ -11,7 +11,7 @@ export const onChange = functions.storage
 export const onArchive = functions.storage
   .bucket("samaple")
   .object()
-  .onArchive(_handler => {
+  .onArchive((_objectMetadata, _context) => {
     // do anything
     console.log("storage archived");
   });
@@ -19,7 +19,7 @@ export const onArchive = functions.storage
 export const onDelete = functions.storage
   .bucket("samaple")
   .object()
-  .onDelete(_handler => {
+  .onDelete((_objectMetadata, _context) => {
     // do anything
     console.log("storage deleted");
   });
@@ -27,7 +27,7 @@ export const onDelete = functions.storage
 export const onFinalize = functions.storage
   .bucket("samaple")
   .object()
-  .onFinalize(_handler => {
+  .onFinalize((_objectMetadata, _context) => {
     // do anything
     console.log("storage finalized");
   });
@@ -35,7 +35,7 @@ export const onFinalize = functions.storage
 export const onMetadataUpdate = functions.storage
   .bucket("samaple")
   .object()
-  .onMetadataUpdate(_handler => {
+  .onMetadataUpdate((_objectMetadata, _context) => {
     // do anything
     console.log("storage metadata updated");
   });
