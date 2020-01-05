@@ -1,5 +1,5 @@
 import * as FirestoreTrigger from "./firestore/index";
-import * as RemoteConfigTrigger from "./firestore/index";
+import * as RemoteConfigTrigger from "./remoteConfig/index";
 import * as AuthenticationTrigger from "./authentication/index";
 import * as AnalyticsTrigger from "./analytics/index";
 import * as StorageTrigger from "./storage/index";
