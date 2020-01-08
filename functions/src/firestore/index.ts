@@ -9,7 +9,7 @@ export const onCreate = functions.firestore
 
 export const onUpdate = functions.firestore
   .document("/users/{userId}")
-  .onUpdate(async (snapshot, context) => {
+  .onUpdate(async (change, context) => {
     // do anything
     console.log(`user ${context.params.userId} updated.`);
   });
@@ -23,7 +23,7 @@ export const onDelete = functions.firestore
 
 export const onWrite = functions.firestore
   .document("/users/{userId}")
-  .onUpdate(async (snapshot, context) => {
+  .onWrite(async (change, context) => {
     // do anything
     console.log(`user ${context.params.userId} wrote.`);
   });
